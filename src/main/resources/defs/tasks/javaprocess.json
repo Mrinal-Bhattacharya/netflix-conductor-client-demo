@@ -1,0 +1,34 @@
+[
+	{
+		"name": "javaprocess1",
+		"retryCount": 3,
+		"timeoutSeconds": 600,
+		"inputKeys": [
+			"name"
+		],
+		"outputKeys": [],
+		"timeoutPolicy": "TIME_OUT_WF",
+		"retryLogic": "FIXED",
+		"retryDelaySeconds": 600,
+		"responseTimeoutSeconds": 600,
+		"concurrentExecLimit": 100,
+		"rateLimitFrequencyInSeconds": 60,
+		"rateLimitPerFrequency": 50
+	},
+	{
+		"name": "javaprocess2",
+		"retryCount": 3,
+		"timeoutSeconds": 600,
+		"inputKeys": [
+			"name"
+		],
+		"outputKeys": [],
+		"timeoutPolicy": "TIME_OUT_WF",
+		"retryLogic": "FIXED",
+		"retryDelaySeconds": 600,
+		"responseTimeoutSeconds": 600,
+		"concurrentExecLimit": 100,
+		"rateLimitFrequencyInSeconds": 60,
+		"rateLimitPerFrequency": 50
+	}
+]

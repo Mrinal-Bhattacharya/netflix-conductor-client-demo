@@ -1,0 +1,55 @@
+{
+	"name": "lang-decision-workflow",
+	"version": 1,
+	"tasks": [
+		{
+			"name": "lang-decision",
+			"taskReferenceName": "lang-decision",
+			"inputParameters": {
+				"case_value_param": "${workflow.input.lang}"
+			},
+			"type": "DECISION",
+			"caseValueParam": "case_value_param",
+			"decisionCases": {
+				"DOTNET": [
+					{
+						"name": "dotnetprocess1",
+						"taskReferenceName": "dotnetprocess1",
+						"inputParameters": {
+							"name": "${workflow.input.name}"
+						},
+						"type": "SIMPLE"
+					},
+					{
+						"name": "dotnetprocess2",
+						"taskReferenceName": "dotnetprocess2",
+						"inputParameters": {
+							"name": "${workflow.input.name}"
+						},
+						"type": "SIMPLE"
+					}
+				],
+				"JAVA": [
+					{
+						"name": "javaprocess1",
+						"taskReferenceName": "javaprocess1",
+						"inputParameters": {
+							"name": "${workflow.input.name}"
+						},
+						"type": "SIMPLE"
+					},
+					{
+						"name": "javaprocess2",
+						"taskReferenceName": "javaprocess2",
+						"inputParameters": {
+							"name": "${workflow.input.name}"
+						},
+						"type": "SIMPLE"
+					}
+				]
+			}
+		}
+	],
+	"outputParameters": {},
+	"schemaVersion": 2
+}
